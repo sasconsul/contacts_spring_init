@@ -1,0 +1,25 @@
+[[README for contacts_spring_init]]
+
+
+This code is based on the spring-boot_react tutorial and guide
+https://spring.io/guides/tutorials/react-and-spring-data-rest/
+
+Along with the spring.io blog: https://spring.io/blog/2015/09/01/react-js-and-spring-data-rest-part-1-basic-features
+and infoq article https://www.infoq.com/articles/boot-microservices
+
+To reduce boilerplate I have used Lombak as suggested when running http://start.spring.io to build a starter project.
+
+
+== To install the database in Postgres 
+
+NOTE: Out of the box the system will run a h2database for unit and integration testing at build time.
+
+In psql as root run the following commands:
+
+CREATE USER contacts_spring_init;
+ALTER USER contacts_spring_init SUPERUSER CREATEDB;
+CREATE DATABASE contacts_spring_init;
+
+WARNING: This creates a user 'contacts_spring_init' with superuser privileges 
+-- should be changed in production.  
+
